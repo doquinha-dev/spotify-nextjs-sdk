@@ -1,5 +1,5 @@
 import { LoginButton } from "@/components/LoginButton";
-import { Player } from "@/components/Player";
+import { PlayerContainer } from "@/containers/PlayerContainer";
 import type { GetServerSideProps, NextPage } from "next";
 
 type Props = {
@@ -10,7 +10,7 @@ const Home: NextPage<Props> = ({ token }) => {
   console.log(token);
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-zinc-950 p-24">
-      {!token ? <Player/> : <LoginButton />}
+      {token ? <PlayerContainer token={token} /> : <LoginButton />}
     </main>
   );
 };
