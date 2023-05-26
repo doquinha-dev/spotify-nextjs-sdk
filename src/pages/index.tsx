@@ -1,3 +1,4 @@
+import { LoginButton } from "@/components/LoginButton";
 import type { GetServerSideProps, NextPage } from "next";
 
 
@@ -8,8 +9,8 @@ type Props = {
 const Home: NextPage<Props> = ({ token }) => {
   console.log(token);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {token ? <span>{token}</span> : <span>Login</span>}
+    <main className="flex min-h-screen flex-col items-center justify-center bg-zinc-950 p-24">
+      {token ? <span className="text-white">{token}</span> : <LoginButton/>}
     </main>
   );
 };
