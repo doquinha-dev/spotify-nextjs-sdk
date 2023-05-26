@@ -7,7 +7,7 @@ export const LoginButton = () => {
       <span className="absolute inset-0 w-3 bg-green-600 transition-all duration-[250ms] ease-out group-hover:w-full"/>
       <div className="relative text-black group-hover:text-white">
         <Link
-          href="/api/auth/login"
+          href="/api/auth/loginSpotify"
           className="flex items-center justify-center gap-3 text-lg"
         >
           Login with Spotify <BsSpotify size={25} />
