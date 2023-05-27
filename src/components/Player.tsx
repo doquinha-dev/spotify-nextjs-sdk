@@ -22,10 +22,10 @@ export const Player = ({
         <div className="flex h-full w-[350px] flex-col items-center justify-center border">
           <Image
             src={currentTrack.album.images[0].url}
-            loader={() => currentTrack.album.images[0].url}
-            alt={`capa do disco`}
+            alt={`Capa do disco ${currentTrack.album.name} da banda ${currentTrack.artists[0].name}`}
             width={350}
             height={350}
+            unoptimized
             className="mx-auto"
           />
         </div>
