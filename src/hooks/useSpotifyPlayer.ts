@@ -30,6 +30,7 @@ export const useSpotifyPlayer = ({ token }: UseSpotifyPlayerProps) => {
 
       setPlayer(player);
 
+
       player.addListener("player_state_changed", ({ track_window, paused }) => {
         if (!track_window) return;
 
